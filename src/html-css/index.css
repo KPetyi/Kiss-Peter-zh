@@ -1,14 +1,47 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Container for the cards */
+#employee-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
     font-family: Arial, sans-serif;
 }
 
-html {
-    font-size: 10px;
+/* Individual Card Styling */
+.employee-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
 }
 
-#employee-container {
-    width: 100%;
+/* Make the picture round */
+.employee-pic {
+    border-radius: 50%;
+}
+
+/* Text Container inside the card */
+.employee-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+.employee-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.employee-role {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666;
 }

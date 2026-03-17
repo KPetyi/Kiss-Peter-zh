@@ -6,20 +6,20 @@ export const employees = [
     { id: 5, name: "Dávid", role: "Developer", salary: 850000 }
 ];
 
-/**
- * Task 1: Find The High Rollers
- * Return an array of names of employees who earn more than the given limit.
- */
 export function getHighEarners(staff, limit) {
-    return [];
+    return staff
+        .filter(person => person.salary > limit)
+        .map(person => person.name);
 }
 
-/**
- * Task 2: Status Update
- * The company is having a 'Developer' bonus day.
- * Increase the salary of all "Developer" roles by 10%.
- * Return the updated array.
- */
 export function applyDevBonus(staff) {
-    return [];
+    return staff.map(person => {
+        if (person.role === "Developer") {
+            return {
+                ...person,
+                salary: Math.round(person.salary * 1.1)
+            };
+        }
+        return person;
+    });
 }
